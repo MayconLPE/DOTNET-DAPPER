@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\DOTNET-DAPPER.props" />
+</Project>

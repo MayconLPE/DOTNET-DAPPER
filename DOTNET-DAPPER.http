@@ -1,0 +1,6 @@
+@DOTNET_DAPPER_HostAddress = http://localhost:5123
+
+GET {{DOTNET_DAPPER_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
