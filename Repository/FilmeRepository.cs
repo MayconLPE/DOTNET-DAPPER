@@ -26,8 +26,11 @@ public class FilmeRepository : IFilmeRepository
                     FROM tb_filme f
                     JOIN tb_produtora p ON  f.id_produtora = p.id";
 
-        using var con = new SqlConnection(connectioString);
-        return await con.QueryAsync<FilmeResponse>(sql);
+        using (var con = new SqlConnection(connectioString))
+        {
+            return await con.QueryAsync<FilmeResponse>(sql);
+        }
+
     }
 
     public async Task<FilmeResponse> BuscaFilmeAsync(int id)
