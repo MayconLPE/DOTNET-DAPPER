@@ -58,14 +58,27 @@ public class FilmeRepository : IFilmeRepository
 
     }
 
-    public Task<bool> AtualizarAsync(FilmeRequest request, int id)
+    public async Task<bool> AtualizarAsync(FilmeRequest request, int id)
     {
-        throw new NotImplementedException();
+        string sql = @"UPDATE tb_filme SET
+                            nome = @Nome,
+                            ano = @Ano
+                            WHERE id = @Id";
+
+        var parametros = new DynamicParameters();
+        parametros.Add("Ano", request.Ano);
+        parametros.Add("Nome", request.Nome);
+        parametros.Add("Id", id);
+
+        using var con = new SqlConnection(connectioString);
+        return await con.ExecuteAsync(sql, parametros) > 0;
     }
-    public Task<bool> DeletarAsync(int id)
+    public async Task<bool> DeletarAsync(int id)
     {
-        throw new NotImplementedException();
+        string sql = @"DELETE FROM tb_filme
+                        WHERE id = @Id";
+
+        using var con = new SqlConnection(connectioString);
+        return await con.ExecuteAsync(sql, new { Id = id }) > 0;
     }
-
-
 }

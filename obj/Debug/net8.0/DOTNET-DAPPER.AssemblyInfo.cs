@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DOTNET-DAPPER")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bc91842abf7caf28a0856610781a177fd3b7232e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ce08350911daacc8ee5a65e2248696c9907cabab")]
 [assembly: System.Reflection.AssemblyProductAttribute("DOTNET-DAPPER")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DOTNET-DAPPER")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
